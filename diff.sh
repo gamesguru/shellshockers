@@ -5,9 +5,10 @@ do
     if [ $d != . ]
     then
         cd $d
-        echo git diff
+        echo 'git --no-pager diff'
         echo `pwd`
+        git --no-pager diff
+        echo '\n'
         cd ./..
     fi
-
 done

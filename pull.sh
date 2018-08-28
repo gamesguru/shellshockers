@@ -5,9 +5,10 @@ do
     if [ $d != . ]
     then
         cd $d
-        echo `git pull`
+        echo 'git pull'
         echo `pwd`
+        echo `git pull`
+        echo '\n'
         cd ./..
     fi
-
 done
