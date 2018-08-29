@@ -1,4 +1,5 @@
 #!/bin/sh
+#place this in a folder with all your git repos, it recurses one level deep for `git diff`
 
 for d in `find . -maxdepth 1 -type d`
 do
@@ -6,7 +7,7 @@ do
     then
         cd $d
         echo 'git --no-pager diff'
-        echo `pwd`
+        pwd
         git --no-pager diff
         echo '\n'
         cd ./..
